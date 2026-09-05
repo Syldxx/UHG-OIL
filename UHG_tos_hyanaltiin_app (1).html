@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Тос, тосолгооны хяналт — UHG</title>
+<style>
+:root{
+--bg:#f6f6f4;--card:#fff;--ln:#e6e6e1;--ln2:#d2d2cb;
+--tx:#1c1c1a;--tx2:#6a6a64;--tx3:#9a9a93;
+--blue:#185fa5;--blueBg:#e6f1fb;--blueLn:#85b7eb;
+--teal:#0f6e56;--tealBg:#e1f5ee;--tealLn:#5dcaa5;
+--viol:#534ab7;--violBg:#eeedfe;--violLn:#afa9ec;
+--coral:#993c1d;--coralBg:#faece7;--coralLn:#f0997b;
+--red:#a32d2d;--redBg:#fcebeb;
+--grn:#3b6d11;--grnBg:#eaf3de;
+--amb:#854f0b;--ambBg:#faeeda;
+--acc:var(--blue);--accBg:var(--blueBg);--accLn:var(--blueLn);
+--r:9px;--r2:13px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font-size:15px;line-height:1.5;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+-webkit-text-size-adjust:100%;padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+h1{font-size:19px;font-weight:650;margin:0}
+h2{font-size:14px;font-weight:650;margin:0 0 11px;color:var(--tx)}
+p{margin:0}
+.wrap{max-width:920px;margin:0 auto;padding:14px 14px 24px}
+.top{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--ln);
+padding:calc(11px + env(safe-area-inset-top)) 14px 11px}
+.top .in{max-width:920px;margin:0 auto;display:flex;align-items:center;gap:10px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--acc);flex:none}
+.top .sp{flex:1;min-width:0}
+.top .sub{font-size:12px;color:var(--tx3)}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:var(--r2);padding:15px;margin-bottom:12px}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+@media(min-width:640px){.mg{grid-template-columns:repeat(4,1fr)}}
+.m{background:var(--card);border:1px solid var(--ln);border-radius:var(--r2);padding:12px}
+.m .l{font-size:11.5px;color:var(--tx2);margin-bottom:2px}
+.m .v{font-size:22px;font-weight:650;line-height:1.2}
+.row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--ln)}
+.row:last-child{border-bottom:none}
+.row .g{flex:1;min-width:0}
+.t{font-size:14px;margin:0}
+.s{font-size:11.5px;color:var(--tx3);margin:1px 0 0}
+.v{font-size:14px;font-weight:650;white-space:nowrap}
+.bar{height:6px;border-radius:4px;background:#eeeeea;overflow:hidden;margin-top:5px}
+.bar i{display:block;height:100%;border-radius:4px}
+.pill{display:inline-block;font-size:11.5px;font-weight:650;padding:3px 9px;border-radius:20px;white-space:nowrap}
+.p-red{background:var(--redBg);color:var(--red)}
+.p-grn{background:var(--grnBg);color:var(--grn)}
+.p-amb{background:var(--ambBg);color:var(--amb)}
+.p-acc{background:var(--accBg);color:var(--acc)}
+.note{font-size:11.5px;color:var(--tx3);margin-top:9px}
+.err{font-size:12.5px;color:var(--red);margin-top:5px;min-height:16px}
+.banner{border-radius:var(--r);padding:11px 13px;font-size:13px;margin-bottom:10px;display:flex;gap:9px}
+.b-red{background:var(--redBg);color:var(--red)}
+.b-amb{background:var(--ambBg);color:var(--amb)}
+.b-grn{background:var(--grnBg);color:var(--grn)}
+.b-acc{background:var(--accBg);color:var(--acc)}
+label{display:block;font-size:12.5px;color:var(--tx2);margin:0 0 5px}
+select,input,textarea{width:100%;font-family:inherit;font-size:15px;color:var(--tx);background:var(--card);
+border:1px solid var(--ln2);border-radius:var(--r);outline:none}
+select,input{height:42px;padding:0 11px}
+textarea{padding:9px 11px;min-height:64px;resize:vertical}
+select:focus,input:focus,textarea:focus{border-color:var(--acc);box-shadow:0 0 0 3px var(--accBg)}
+.f{margin-bottom:13px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+button{font-family:inherit;font-size:14px;font-weight:500;color:var(--tx);background:var(--card);
+border:1px solid var(--ln2);border-radius:var(--r);padding:10px 15px;cursor:pointer}
+button:active{transform:scale(.985)}
+button.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+button.w{width:100%}
+button.gh{border-color:transparent;background:transparent;color:var(--tx3);padding:6px 8px}
+.seg{display:flex;gap:6px;margin-bottom:13px}
+.seg button{flex:1;padding:10px 4px}
+.seg button.on{background:var(--accBg);border-color:var(--accLn);color:var(--acc);font-weight:650}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:13px}
+.chips button{font-size:12.5px;padding:6px 12px;border-radius:20px}
+.chips button.on{background:var(--accBg);border-color:var(--accLn);color:var(--acc);font-weight:650}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:46px;height:42px;padding:0;font-size:18px}
+.qty input{text-align:center;font-weight:650}
+.big{background:var(--accBg);border-radius:var(--r2);padding:15px;text-align:center;margin-bottom:12px}
+.big .n{font-size:30px;font-weight:650;color:var(--acc);line-height:1.2}
+.big .l,.big .s{font-size:11.5px;color:var(--acc)}
+.stg{display:flex;align-items:center;margin:9px 0 4px}
+.stg .d{width:10px;height:10px;border-radius:50%;flex:none}
+.stg .l{flex:1;height:2px}
+.stgl{display:flex;font-size:9.5px;color:var(--tx3);gap:2px}
+.stgl span{flex:1;text-align:center}
+.ins{display:flex;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid var(--ln)}
+.ins .g{flex:1;min-width:0;font-size:13.5px}
+.ins .b{display:flex;gap:4px}
+.ins .b button{min-width:38px;padding:5px 8px;font-size:12px;border-radius:7px}
+.ins .b button.ok{background:var(--grnBg);border-color:#97c459;color:var(--grn)}
+.ins .b button.bad{background:var(--redBg);border-color:#f09595;color:var(--red)}
+.ins .b button.na{background:var(--blueBg);border-color:var(--blueLn);color:var(--blue)}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);border-top:1px solid var(--ln);
+display:flex;padding-bottom:env(safe-area-inset-bottom)}
+.nav button{flex:1;border:none;background:none;padding:9px 2px 8px;color:var(--tx3);border-radius:0}
+.nav button .ic{display:block;font-size:19px;line-height:1.1;margin-bottom:2px}
+.nav button .lb{font-size:10px;font-weight:500}
+.nav button.on{color:var(--acc)}
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+.tbl th{text-align:left;font-size:11.5px;font-weight:650;color:var(--tx2);padding:0 6px 7px 0;border-bottom:1px solid var(--ln)}
+.tbl td{padding:8px 6px 8px 0;border-bottom:1px solid var(--ln)}
+.tbl .r{text-align:right;padding-right:0}
+.empty{text-align:center;color:var(--tx3);font-size:13px;padding:22px 0}
+details{border-top:1px solid var(--ln);margin-top:12px;padding-top:11px}
+summary{cursor:pointer;font-size:12.5px;color:var(--tx2);font-weight:650}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+@media print{.nav,.noprint{display:none!important}body{background:#fff;padding:0}.card{border:none}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="in">
+  <span class="dot" id="dot"></span>
+  <div class="sp"><h1 id="ttl">Нүүр</h1><p class="sub" id="tsub"></p></div>
+  <button class="gh noprint" id="cfgbtn" aria-label="Тохиргоо">⚙</button>
+</div></div>
+
+<div class="wrap" id="app"></div>
+
+<div class="nav noprint" id="nav"></div>
+
+<script>
+var OEM = [{"n":"Allmand гэрэлтүүлэг","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":6.0,"h":250}]},{"n":"CAT 16M","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":30.0,"h":250},{"c":"Transmission And Differential","p":"Dynatrans ACX 10W30","v":100.0,"h":1000},{"c":"Hydraulic System","p":"Dynatrans ACX 10W30","v":64.0,"h":2000},{"c":"Tandem Drive Oil","p":"Dynatrans ACX 10W30","v":254.0,"h":1000},{"c":"Wheel Bearing (Front )","p":"Dynatrans ACX 50","v":0.9,"h":1000},{"c":"Circle Drive Oil","p":"Dynatrans ACX 50","v":10.0,"h":1000}]},{"n":"CAT 773D/E","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":76.0,"h":250},{"c":"Transmission System And Torque Converter System","p":"Dynatrans ACX 10W30","v":149.0,"h":1000},{"c":"Differential And Final Drive","p":"Dynatrans ACX 50","v":140.0,"h":2000},{"c":"Front Wheel","p":"Dynatrans ACX 50","v":7.0,"h":500},{"c":"Hydraulic System (Hoist And Brake)","p":"Dynatrans ACX 10W30","v":508.0,"h":1000},{"c":"Steering System","p":"Dynatrans ACX 10W","v":92.0,"h":1000}]},{"n":"CAT 777D","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":125.0,"h":250},{"c":"Transmission System","p":"Dynatrans ACX 10W30","v":246.0,"h":1000},{"c":"Differential And Final Drive","p":"Dynatrans ACX 50","v":264.0,"h":2000},{"c":"Front Wheel","p":"Dynatrans ACX 50","v":15.0,"h":500},{"c":"Hydraulic System (Hoist Torgue And Brake)","p":"Dynatrans ACX 10W30","v":504.0,"h":1000},{"c":"Steering","p":"Dynatrans ACX 10W","v":57.0,"h":1000}]},{"n":"CAT 785C","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":204.0,"h":500},{"c":"Transmission System And Tank","p":"Dynatrans ACX 10W30","v":324.0,"h":1000},{"c":"Differential And Final Drive","p":"Dynatrans ACX 50","v":453.0,"h":2000},{"c":"Front Wheel","p":"Dynatrans ACX 50","v":28.0,"h":500},{"c":"Hyd (Hoist Converter And Brakes)","p":"Dynatrans ACX 10W30","v":978.0,"h":2000},{"c":"Steering","p":"Dynatrans ACX 10W","v":207.0,"h":2000}]},{"n":"CAT 793D","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":291.0,"h":500},{"c":"Transmission And Torque Converter","p":"Dynatrans ACX 10W30","v":227.0,"h":1000},{"c":"Differential And Final Drive","p":"Dynatrans ACX 50","v":1022.0,"h":2000},{"c":"Front Wheel","p":"Dynatrans ACX 50","v":53.0,"h":500},{"c":"Hydraulic (Hoist And Brakes)","p":"Dynatrans ACX 10W30","v":1137.0,"h":2000},{"c":"Steering Hydraulic System","p":"Dynatrans ACX 10W","v":265.0,"h":2000}]},{"n":"CAT 928H","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":16.0,"h":250},{"c":"Front Diff & Final Drives","p":"Dynatrans ACX 50","v":21.5,"h":2000},{"c":"Rear Diff & Final Drives","p":"Dynatrans ACX 50","v":21.5,"h":2000},{"c":"Transmission","p":"Dynatrans ACX 10W30","v":34.0,"h":1000},{"c":"Hydraulic Tank","p":"Dynatrans ACX 10W30","v":70.0,"h":1000}]},{"n":"CAT 988H","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":60.0,"h":250},{"c":"Transmission","p":"Dynatrans ACX 10W30","v":83.0,"h":1000},{"c":"Hyd Tank","p":"Dynatrans ACX 10W30","v":557.0,"h":2000},{"c":"Steering & Brakes","p":"Dynatrans ACX 10W","v":95.0,"h":2000},{"c":"Front/Rear Difs & Final Drives","p":"Dynatrans ACX 50","v":372.0,"h":2000}]},{"n":"CAT 992K","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":120.0,"h":250},{"c":"Transmission","p":"Dynatrans ACX 10W30","v":169.0,"h":1000},{"c":"Hydraulic System","p":"Dynatrans ACX 10W30","v":326.0,"h":2000},{"c":"Steering & Brakes","p":"Dynatrans ACX 10W","v":159.0,"h":2000},{"c":"Front/Rear Difs & Final Drives","p":"Dynatrans ACX 50","v":705.0,"h":2000}]},{"n":"CAT D10T","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":68.0,"h":250},{"c":"Transmission","p":"Dynatrans ACX 10W30","v":193.0,"h":1000},{"c":"Hydraulic","p":"Dynatrans ACX 10W30","v":144.0,"h":2000},{"c":"Final Drives","p":"Dynatrans ACX 50","v":46.0,"h":1000},{"c":"Recoil Spring Compartment","p":"Dynatrans ACX 50","v":64.0,"h":2000},{"c":"Pivot Shaft","p":"Dynatrans ACX 50","v":33.0,"h":2000}]},{"n":"CAT D9R","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":45.5,"h":250},{"c":"Transmission","p":"Dynatrans ACX 10W30","v":208.0,"h":1000},{"c":"Hydraulic","p":"Dynatrans ACX 10W30","v":77.2,"h":2000},{"c":"Final Drives","p":"Dynatrans ACX 50","v":30.0,"h":1000},{"c":"Recoil Spring Compartment","p":"Dynatrans ACX 50","v":90.0,"h":2000},{"c":"Pivot Shaft","p":"Dynatrans ACX 50","v":60.0,"h":2000}]},{"n":"CAT M318D","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":17.0,"h":250},{"c":"Transmission System And Tank","p":"Dynatrans ACX 10W30","v":2.5,"h":1000},{"c":"Front Differential","p":"Dynatrans ACX 50","v":11.0,"h":1000},{"c":"Differential And Final Drive","p":"Dynatrans ACX 50","v":17.0,"h":1000},{"c":"Hyd Tank & Hyd System","p":"Dynatrans ACX 10W","v":425.0,"h":1000}]},{"n":"CAT TH560B","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":15.8,"h":250},{"c":"Transmission (Gearbox)","p":"Fluide XLD FE","v":4.4,"h":1000},{"c":"Hydraulics","p":"Equivis AF 46","v":200.0,"h":1000},{"c":"Front/Rear Differential","p":"Dynatrans MPX","v":70.0,"h":1000},{"c":"Front And Rear Reducers","p":"Transtec 5 80W90","v":12.0,"h":1000},{"c":"Brakes","p":"HBF 4","v":0.8,"h":1000}]},{"n":"Genie 80Z/60","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":12.5,"h":250}]},{"n":"Hitachi EX3600","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":540.0,"h":500},{"c":"Pump Transmission","p":"Rubia Works 1000 15W40","v":62.0,"h":500},{"c":"Swing Boxes","p":"Transtec 5 80W90","v":300.0,"h":1000},{"c":"Final Drives","p":"Transtec 5 80W90","v":440.0,"h":2000}]},{"n":"Liebherr R9250","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":245.0,"h":250},{"c":"Splitter Box","p":"Transtec 5 80W90","v":70.0,"h":1000},{"c":"Final Drives","p":"Transtec 5 80W90","v":104.0,"h":1000},{"c":"Swing Boxes","p":"Transtec 5 80W90","v":74.0,"h":500}]},{"n":"Liebherr R9400","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":210.0,"h":250},{"c":"Splitter Box","p":"Transtec 5 80W90","v":65.0,"h":1000},{"c":"Engine Coupling","p":"Rubia Works 1000 15W40","v":1.4,"h":2000},{"c":"Final Drives","p":"Transtec 5 80W90","v":160.0,"h":1000},{"c":"Swing Boxes","p":"Transtec 5 80W90","v":78.0,"h":500},{"c":"Travel Brakes","p":"Dynatrans ACX 10W30","v":1.6,"h":1000},{"c":"Lifetime Sealing Interspace","p":"Dynatrans ACX 10W30","v":16.0,"h":1000}]},{"n":"Liebherr R996 / R996B","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":340.0,"h":250},{"c":"Splitter Box","p":"Transtec 5 80W90","v":200.0,"h":1000},{"c":"Engine Coupling","p":"Rubia Works 1000 15W40","v":1.2,"h":2000},{"c":"Final Drives","p":"Transtec 5 80W90","v":400.0,"h":1000},{"c":"Swing Boxes","p":"Transtec 5 80W90","v":152.0,"h":500}]},{"n":"Manitou telehandler","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":15.8,"h":500},{"c":"Transmission (Gearbox)","p":"Oem /582391/","v":4.4,"h":500},{"c":"Hydraulics","p":"Equivis AF 46","v":2000.0,"h":500},{"c":"Front/Rear Differential","p":"Oem /582391/","v":70.0,"h":500},{"c":"Front And Rear Reducers","p":"Transtec 5 80W90","v":12.0,"h":500},{"c":"Brakes","p":"Manitou Brake /490408/","v":0.8,"h":2000}]},{"n":"Miller гагнуур","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":6.0,"h":250}]},{"n":"SOCMA TH HNF-160","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":27.0,"h":250},{"c":"Transmission","p":"Fluide XLD FE","v":45.0,"h":1000},{"c":"Hydraulic","p":"Azolla ZS 68","v":260.0,"h":1000},{"c":"Drive Axle","p":"Transtec 5 80W90","v":19.0,"h":2000},{"c":"Hub Oil","p":"Transtec 5 80W90","v":8.0,"h":2000}]},{"n":"Terex RC60","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":18.0,"h":250},{"c":"Transmission","p":"Fluide XLD FE","v":19.0,"h":1000},{"c":"Rear Diff","p":"Transtec 5 80W90","v":34.0,"h":1000},{"c":"Front Diff","p":"Transtec 5 80W90","v":35.0,"h":1000},{"c":"Rotation Reduction Gear","p":"Carter SH 220","v":6.0,"h":1000},{"c":"Hydraulics","p":"Equivis AF 46","v":800.0,"h":1000},{"c":"Main Winch Oil","p":"Carter EP 150","v":20.0,"h":1000},{"c":"Auxiliary Winch Oil","p":"Carter EP 150","v":12.0,"h":1000},{"c":"Brake Fluid","p":"HBF 4","v":2.0,"h":1000}]},{"n":"Terex RT130","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":18.0,"h":250},{"c":"Transmission","p":"Fluide XLD FE","v":41.0,"h":1000},{"c":"Rear Diff","p":"Transtec 5 80W90","v":40.0,"h":1000},{"c":"Front Diff","p":"Transtec 5 80W90","v":42.0,"h":1000},{"c":"Rotation Reduction Gear","p":"Carter SH 220","v":6.0,"h":1000},{"c":"Hydraulics","p":"Equivis AF 46","v":1380.0,"h":1000},{"c":"Main Winch","p":"Carter EP 150","v":42.0,"h":1000},{"c":"Auxiliary Winch","p":"Carter EP 150","v":12.0,"h":1000},{"c":"Brake Fluid","p":"HBF 4","v":2.0,"h":1000}]},{"n":"Генератор","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":10.0,"h":250}]},{"n":"Дизель компрессор","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":5.0,"h":250},{"c":"Compressor","p":"Dacnis SH 46","v":15.0,"h":1000}]},{"n":"Усны насос","c":[{"c":"Engine","p":"Rubia Works 1000 15W40","v":15.0,"h":250}]}];
+
+</script>
+<script>
+/* =====================================================================
+   SUPABASE ХОЛБОЛТ · нэвтрэх, синк, офлайн дараалал
+   ===================================================================== */
+var SUPA_URL = "https://hjknzrsvwgcjqklpxkin.supabase.co";
+var SUPA_KEY = "sb_publishable_rw4WpPblAEAYgzyK6rMuIg_UJE57nCB";
+
+var AUTH = { token:"", refresh:"", exp:0, email:"" };
+var SYNC = { state:"off", queue:[], last:"", running:false, again:false };
+
+function lsGet(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+function lsSet(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+function lsDel(k){ try{ localStorage.removeItem(k); }catch(e){} }
+
+function saveAuth(){ lsSet("uhg-auth", JSON.stringify(AUTH)); }
+function loadAuth(){
+  try{ var a = JSON.parse(lsGet("uhg-auth")); if(a && a.token) AUTH = a; }catch(e){}
+}
+function clearAuth(){ AUTH = {token:"",refresh:"",exp:0,email:""}; lsDel("uhg-auth"); }
+
+function saveLocal(){
+  lsSet("uhg-app", JSON.stringify({
+    items:S.items, moves:S.moves, inspections:S.inspections,
+    calc:S.calc, queue:SYNC.queue, last:SYNC.last
+  }));
+}
+function loadLocal(){
+  try{
+    var d = JSON.parse(lsGet("uhg-app"));
+    if(!d) return;
+    if(d.items && d.items.length) S.items = d.items;
+    if(d.moves) S.moves = d.moves;
+    if(d.inspections) S.inspections = d.inspections;
+    if(d.calc) S.calc = d.calc;
+    if(d.queue) SYNC.queue = d.queue;
+    if(d.last) SYNC.last = d.last;
+  }catch(e){}
+}
+
+function api(path, opts){
+  opts = opts || {};
+  var h = { "apikey": SUPA_KEY, "Content-Type": "application/json" };
+  if(AUTH.token) h["Authorization"] = "Bearer " + AUTH.token;
+  if(opts.prefer) h["Prefer"] = opts.prefer;
+  return fetch(SUPA_URL + path, {
+    method: opts.method || "GET",
+    headers: h,
+    body: opts.body ? JSON.stringify(opts.body) : undefined
+  }).then(function(r){
+    if(r.status === 401) { throw new Error("auth"); }
+    if(!r.ok) return r.text().then(function(t){ throw new Error(t || ("HTTP " + r.status)); });
+    if(r.status === 204) return null;
+    return r.text().then(function(t){ return t ? JSON.parse(t) : null; });
+  });
+}
+
+function login(email, pass){
+  return fetch(SUPA_URL + "/auth/v1/token?grant_type=password", {
+    method:"POST",
+    headers:{ "apikey":SUPA_KEY, "Content-Type":"application/json" },
+    body: JSON.stringify({ email:email, password:pass })
+  }).then(function(r){
+    return r.json().then(function(j){
+      if(!r.ok) throw new Error(j.error_description || j.msg || j.message || "Нэвтрэх амжилтгүй");
+      AUTH.token = j.access_token;
+      AUTH.refresh = j.refresh_token;
+      AUTH.exp = Date.now() + (j.expires_in || 3600) * 1000;
+      AUTH.email = email;
+      saveAuth();
+      return true;
+    });
+  });
+}
+
+function refreshToken(){
+  if(!AUTH.refresh) return Promise.reject(new Error("no refresh"));
+  return fetch(SUPA_URL + "/auth/v1/token?grant_type=refresh_token", {
+    method:"POST",
+    headers:{ "apikey":SUPA_KEY, "Content-Type":"application/json" },
+    body: JSON.stringify({ refresh_token: AUTH.refresh })
+  }).then(function(r){
+    if(!r.ok) throw new Error("refresh failed");
+    return r.json();
+  }).then(function(j){
+    AUTH.token = j.access_token;
+    AUTH.refresh = j.refresh_token || AUTH.refresh;
+    AUTH.exp = Date.now() + (j.expires_in || 3600) * 1000;
+    saveAuth();
+  });
+}
+
+function ensureToken(){
+  if(!AUTH.token) return Promise.reject(new Error("auth"));
+  if(Date.now() < AUTH.exp - 60000) return Promise.resolve();
+  return refreshToken();
+}
+
+/* ---------- хөрвүүлэлт ---------- */
+function itemToRow(it){
+  return { name:it.n, unit:it.u, monthly:it.mo, uhg:it.uhg, gobi:it.gobi,
+           ub:it.ub, min_qty:it.min, pack:it.pack, updated_by:AUTH.email };
+}
+function rowToItem(r){
+  return { n:r.name, u:r.unit, mo:Number(r.monthly), uhg:Number(r.uhg), gobi:Number(r.gobi),
+           ub:Number(r.ub), min:Number(r.min_qty), pack:r.pack };
+}
+function moveToRow(m){
+  return { id:m.id, from_loc:m.from, to_loc:m.to, status:m.st, dep:m.dep||null,
+           eta:m.eta||null, arr:m.arr||null, carrier:m.carrier||null, plate:m.plate||null,
+           urgent:!!m.urgent, lines:m.lines, created_by:AUTH.email, updated_by:AUTH.email };
+}
+function rowToMove(r){
+  return { id:r.id, from:r.from_loc, to:r.to_loc, st:r.status, dep:r.dep||"", eta:r.eta||"",
+           arr:r.arr||"", carrier:r.carrier||"", plate:r.plate||"", urgent:!!r.urgent,
+           lines:r.lines||[] };
+}
+function inspToRow(x){
+  return { insp_date:x.date, store:x.store, res:x.res, notes:x.notes,
+           note:x.note||null, fixed:!!x.fixed, created_by:AUTH.email };
+}
+function rowToInsp(r){
+  return { id:r.id, date:r.insp_date, store:r.store, res:r.res||{}, notes:r.notes||{},
+           note:r.note||"", fixed:!!r.fixed };
+}
+
+/* ---------- дараалал ---------- */
+function enqueue(op){
+  SYNC.queue.push(op);
+  saveLocal();
+  flush();
+}
+
+function flush(){
+  if(SYNC.running){ SYNC.again = true; return Promise.resolve(); }
+  if(!AUTH.token || !SYNC.queue.length){
+    if(!SYNC.queue.length && SYNC.state !== "off") setSync("ok");
+    return Promise.resolve();
+  }
+  SYNC.running = true;
+  setSync("busy");
+  return ensureToken().then(function(){
+    function step(){
+      if(!SYNC.queue.length) return Promise.resolve();
+      var op = SYNC.queue[0];
+      var p;
+      if(op.t === "item")      p = api("/rest/v1/items?name=eq." + encodeURIComponent(op.d.name), {method:"PATCH", body:op.d, prefer:"return=minimal"});
+      else if(op.t === "move") p = api("/rest/v1/movements", {method:"POST", body:op.d, prefer:"resolution=merge-duplicates,return=minimal"});
+      else if(op.t === "mvup") p = api("/rest/v1/movements?id=eq." + encodeURIComponent(op.d.id), {method:"PATCH", body:op.d, prefer:"return=minimal"});
+      else if(op.t === "insp") p = api("/rest/v1/inspections", {method:"POST", body:op.d, prefer:"return=minimal"});
+      else p = Promise.resolve();
+      return p.then(function(){ SYNC.queue.shift(); saveLocal(); return step(); });
+    }
+    return step();
+  }).then(function(){
+    SYNC.last = new Date().toISOString();
+    saveLocal(); SYNC.running = false; setSync("ok");
+    if(SYNC.again){ SYNC.again = false; return flush(); }
+  }).catch(function(e){
+    SYNC.running = false; SYNC.again = false;
+    setSync(String(e.message) === "auth" ? "auth" : "err");
+  });
+}
+
+function pull(){
+  setSync("busy");
+  return ensureToken().then(function(){
+    return Promise.all([
+      api("/rest/v1/items?select=*&order=sort_order"),
+      api("/rest/v1/movements?select=*&order=dep.desc"),
+      api("/rest/v1/inspections?select=*&order=insp_date.desc")
+    ]);
+  }).then(function(r){
+    if(r[0] && r[0].length) S.items = r[0].map(rowToItem);
+    S.moves = (r[1] || []).map(rowToMove);
+    S.inspections = (r[2] || []).map(rowToInsp).reverse();
+    SYNC.last = new Date().toISOString();
+    saveLocal(); setSync("ok");
+  }).catch(function(e){
+    setSync(String(e.message) === "auth" ? "auth" : "err");
+  });
+}
+
+function setSync(st){
+  SYNC.state = st;
+  var d = $("dot"), s = $("tsub");
+  if(!d || !s) return;
+  var map = {
+    ok:   ["#639922", "Синк хийгдсэн"],
+    busy: ["#ef9f27", "Синк хийж байна"],
+    err:  ["#e24b4a", "Офлайн · " + SYNC.queue.length + " хүлээгдэж байна"],
+    auth: ["#e24b4a", "Дахин нэвтэрнэ үү"],
+    off:  ["#b4b2a9", "Зөвхөн энэ төхөөрөмж дээр"]
+  };
+  var m = map[st] || map.off;
+  d.style.background = m[0];
+  s.textContent = today() + " · " + m[1];
+}
+
+/* нийтийн save() — бүх дэлгэц үүнийг дууддаг */
+function save(){ saveLocal(); }
+
+function pushItem(it){ if(AUTH.token) enqueue({t:"item", d:itemToRow(it)}); }
+function pushMove(m){ if(AUTH.token) enqueue({t:"move", d:moveToRow(m)}); }
+function pushMoveUpdate(m){ if(AUTH.token) enqueue({t:"mvup", d:moveToRow(m)}); }
+function pushInsp(x){ if(AUTH.token) enqueue({t:"insp", d:inspToRow(x)}); }
+
+window.addEventListener("online", function(){ if(AUTH.token) flush(); });
+
+/* ---------- нэвтрэх дэлгэц ---------- */
+function scrLogin(){
+  document.getElementById("nav").style.display = "none";
+  $("ttl").textContent = "Нэвтрэх";
+  $("tsub").textContent = "";
+  $("app").innerHTML = '<div class="card" style="max-width:400px;margin:24px auto">'
+    + '<h2 style="font-size:17px;margin-bottom:4px">Тос, тосолгооны хяналт</h2>'
+    + '<p class="note" style="margin:0 0 16px">Ухаа Худаг · инженерийн систем</p>'
+    + '<div class="f"><label>Имэйл</label><input id="lem" type="email" autocomplete="username"></div>'
+    + '<div class="f"><label>Нууц үг</label><input id="lpw" type="password" autocomplete="current-password"></div>'
+    + '<p class="err" id="lerr"></p>'
+    + '<button class="pri w" id="lbtn">Нэвтрэх</button>'
+    + '<button class="w" id="loff" style="margin-top:9px">Офлайн горимоор үргэлжлүүлэх</button>'
+    + '<p class="note">Офлайн горимд өгөгдөл зөвхөн энэ төхөөрөмж дээр хадгалагдана.</p></div>';
+
+  function go(){
+    var e = $("lem").value.trim(), p = $("lpw").value;
+    if(!e || e.indexOf("@") < 0){ $("lerr").textContent = "Имэйлээ зөв оруулна уу"; return; }
+    if(!p){ $("lerr").textContent = "Нууц үгээ оруулна уу"; return; }
+    $("lerr").textContent = "";
+    $("lbtn").disabled = true; $("lbtn").textContent = "Нэвтэрч байна…";
+    login(e, p).then(function(){
+      S.screen = "app";
+      document.getElementById("nav").style.display = "flex";
+      render();
+      return pull().then(function(){ render(); });
+    }).catch(function(err){
+      $("lbtn").disabled = false; $("lbtn").textContent = "Нэвтрэх";
+      $("lerr").textContent = "Нэвтрэх амжилтгүй. Имэйл, нууц үгээ шалгана уу.";
+    });
+  }
+  $("lbtn").onclick = go;
+  $("lpw").onkeydown = function(ev){ if(ev.key === "Enter") go(); };
+  $("loff").onclick = function(){
+    S.screen = "app"; setSync("off");
+    document.getElementById("nav").style.display = "flex";
+    render();
+  };
+}
+
+var LOC = [
+  {k:"TOTAL", n:"TOTAL Energies", stock:false},
+  {k:"BUYER", n:"Худалдан авагч", stock:false},
+  {k:"CUSTOMS", n:"УБ гааль", stock:false},
+  {k:"UBWH", n:"УБ төв агуулах", stock:true},
+  {k:"GOBI", n:"Говь агуулах", stock:true},
+  {k:"UHG", n:"UHG агуулах", stock:true}
+];
+var LEGS = [
+  {f:"TOTAL", t:"BUYER", d:20},
+  {f:"BUYER", t:"CUSTOMS", d:3},
+  {f:"CUSTOMS", t:"UBWH", d:2},
+  {f:"UBWH", t:"GOBI", d:2},
+  {f:"UBWH", t:"UHG", d:2},
+  {f:"CUSTOMS", t:"GOBI", d:3},
+  {f:"GOBI", t:"UHG", d:1}
+];
+var SEED = [
+  {n:"Rubia Works 1000 15W40", u:"л", mo:39014, uhg:8000, gobi:33000, ub:0, min:10000, pack:"ibc"},
+  {n:"Dynatrans ACX 10W30", u:"л", mo:61050, uhg:6000, gobi:99000, ub:0, min:14000, pack:"ibc"},
+  {n:"Dynatrans ACX 50", u:"л", mo:25535, uhg:4000, gobi:4000, ub:0, min:7000, pack:"ibc"},
+  {n:"Dynatrans ACX 10W", u:"л", mo:3000, uhg:0, gobi:0, ub:0, min:1000, pack:"drum"},
+  {n:"Transtec 5 80W90", u:"л", mo:3112, uhg:1832, gobi:4368, ub:0, min:832, pack:"drum"},
+  {n:"Equivis AF 46", u:"л", mo:5235, uhg:3000, gobi:28000, ub:0, min:2000, pack:"ibc"},
+  {n:"Multis HP 1 Moly Extra", u:"кг", mo:19665, uhg:1800, gobi:34200, ub:0, min:3240, pack:"drum"},
+  {n:"Multis Complex HV0 Moly", u:"кг", mo:11160, uhg:0, gobi:22320, ub:0, min:2000, pack:"drum"},
+  {n:"Trans. Dual 9 FE 75W90", u:"л", mo:193, uhg:208, gobi:0, ub:0, min:208, pack:"drum"},
+  {n:"Carter EP 150", u:"л", mo:8, uhg:112, gobi:60, ub:0, min:20, pack:"drum"}
+];
+var CHECKS = [
+  ["Агуулахын цэвэр байдал","Тоос, тос, бохирдолгүй эсэх"],
+  ["Агааржуулалт, температур","Хэт халуун, хүйтэн орчин эсэх"],
+  ["Савны шошго тодорхой эсэх","Бүтээгдэхүүний нэр, огноо"],
+  ["Савнууд алдагдалтай эсэх","Битүүмжлэл, гоожилт"],
+  ["IBC, торх зөв байрлалтай эсэх","Босоо, тавцан дээр, овоологүй"],
+  ["Тосууд андуурагдахгүй эсэх","Анги, төрөл тусгаарлалттай"],
+  ["Бүртгэл, FIFO мөрддөг эсэх","Хэрэглээний бүртгэл хөтлөгддөг эсэх"],
+  ["Нээгдсэн сав битүү эсэх","Тагтай, хаалттай"],
+  ["Галын аюулгүй байдал","Гал унтраагч, тэмдэг"],
+  ["Асгарсан тос цэвэрлэдэг эсэх","Шингээгч материал, сав"],
+  ["Хуучин тосны хадгалалт","Ашиглагдаагүй тос"],
+  ["Хаягдал тосны ялгах сав","Тусгаарлалттай, шошготой"],
+  ["Асгаралт, алдагдал бүртгэгдсэн эсэх","Тэмдэглэл хөтлөгдсөн эсэх"]
+];
+var STORES = ["Тос хуваарилах орлого","Түгээх агуулах"];
+var PACK = {ibc:{size:1000,units:3.5,l:"IBC 1000 л"}, drum:{size:208,units:1,l:"Торх 208 л"}};
+var TRUCK = 84;
+var TABS = [
+  {k:"home", i:"◉", l:"Нүүр", c:"blue", t:"Нүүр"},
+  {k:"move", i:"▤", l:"Хөдөлгөөн", c:"teal", t:"Хөдөлгөөн"},
+  {k:"insp", i:"✓", l:"Үзлэг", c:"viol", t:"Үзлэг"},
+  {k:"calc", i:"∑", l:"Тооцоолуур", c:"coral", t:"Тооцоолуур"}
+];
+
+var S = {
+  tab:"home", sub:"", items:[], moves:[], inspections:[],
+  calc:{mi:0, iv:2000, qty:1, rows:[], factor:1.2},
+  seq:1, screen:"login"
+};
+SEED.forEach(function(p){ S.items.push(JSON.parse(JSON.stringify(p))); });
+
+function $(id){ return document.getElementById(id); }
+function el(h){ var d=document.createElement("div"); d.innerHTML=h.trim(); return d.firstElementChild; }
+function fmt(n){ return Math.round(n).toLocaleString("en-US"); }
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g, function(c){
+  return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
+function today(){ var d=new Date(); return d.toISOString().slice(0,10); }
+function dAdd(iso, n){ var d=new Date(iso+"T00:00:00"); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
+function dDiff(a, b){ return Math.round((new Date(b+"T00:00:00") - new Date(a+"T00:00:00"))/86400000); }
+function shortD(iso){ return iso ? iso.slice(5).replace("-",".") : ""; }
+function locName(k){ for(var i=0;i<LOC.length;i++) if(LOC[i].k===k) return LOC[i].n; return k; }
+function item(n){ for(var i=0;i<S.items.length;i++) if(S.items[i].n===n) return S.items[i]; return null; }
+function legDays(f,t){ for(var i=0;i<LEGS.length;i++) if(LEGS[i].f===f&&LEGS[i].t===t) return LEGS[i].d; return 3; }
+function days(it, loc){ var per=(it.mo||0)/30; if(per<=0) return null; return (it[loc]||0)/per; }
+
+function openMoves(){ return S.moves.filter(function(m){ return m.st==="transit"; }); }
+function lateMoves(){ return openMoves().filter(function(m){ return dDiff(m.eta, today()) > 0; }); }
+function lowItems(){ return S.items.filter(function(it){ var d=days(it,"uhg"); return d!==null && d < 7; }); }
+function openIssues(){
+  var n=0;
+  S.inspections.forEach(function(x){ CHECKS.forEach(function(_,i){ if(x.res[i]==="bad" && !x.fixed) n++; }); });
+  return n;
+}
+
+function scrHome(){
+  var w = $("app");
+  var low = lowItems(), late = lateMoves();
+  var h = '<div class="mg">'
+    + met("Замд яваа", openMoves().length, "")
+    + met("Хугацаа хэтэрсэн", late.length, late.length?"var(--red)":"")
+    + met("Min-ээс доогуур", low.length, low.length?"var(--red)":"")
+    + met("Нээлттэй асуудал", openIssues(), openIssues()?"var(--amb)":"")
+    + '</div>';
+
+  if(late.length){
+    h += '<div class="banner b-red"><span>!</span><div><b>' + late.length + ' хөдөлгөөн хоцорсон</b>'
+      + '<p class="s" style="color:inherit">' + esc(late.map(function(m){ return m.lines[0].p + " · " + locName(m.to); }).join(" · ")) + '</p></div></div>';
+  }
+
+  h += '<div class="card"><h2>UHG агуулахын нөөц</h2><div id="stk"></div></div>';
+  h += '<div class="card"><h2>Бүх байршлын үлдэгдэл</h2><div style="overflow-x:auto"><table class="tbl"><thead><tr>'
+    + '<th>Тос</th><th class="r">УБ</th><th class="r">Говь</th><th class="r">UHG</th><th class="r">Хоног</th>'
+    + '</tr></thead><tbody>'
+    + S.items.map(function(it){
+        var d = days(it,"uhg");
+        var cl = d===null ? "" : (d<7 ? "p-red" : (d<11 ? "p-amb" : "p-grn"));
+        return '<tr><td>' + esc(it.n) + '</td><td class="r">' + fmt(it.ub) + '</td><td class="r">' + fmt(it.gobi)
+          + '</td><td class="r">' + fmt(it.uhg) + '</td><td class="r">'
+          + (d===null ? "—" : '<span class="pill ' + cl + '">' + d.toFixed(1) + '</span>') + '</td></tr>';
+      }).join("")
+    + '</tbody></table></div><p class="note">УБ төв агуулахын үлдэгдэл гар оруулгаар хөтлөгдөнө.</p></div>';
+
+  w.innerHTML = h;
+
+  var st = $("stk");
+  var sorted = S.items.slice().filter(function(it){ return days(it,"uhg")!==null; })
+    .sort(function(a,b){ return days(a,"uhg") - days(b,"uhg"); }).slice(0,6);
+  if(!sorted.length){ st.innerHTML = '<p class="empty">Өгөгдөл алга</p>'; return; }
+  st.innerHTML = sorted.map(function(it){
+    var d = days(it,"uhg"), pct = Math.min(100, Math.round(d/30*100));
+    var col = d<7 ? "#e24b4a" : (d<11 ? "#ef9f27" : "#639922");
+    return '<div style="padding:8px 0;border-bottom:1px solid var(--ln)">'
+      + '<div style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px">'
+      + '<span>' + esc(it.n) + '</span><span style="font-weight:650;color:' + col + '">' + d.toFixed(1) + ' хоног</span></div>'
+      + '<div class="bar"><i style="width:' + pct + '%;background:' + col + '"></i></div>'
+      + '<p class="s">UHG ' + fmt(it.uhg) + ' ' + it.u + ' · min ' + fmt(it.min) + ' · Говь ' + fmt(it.gobi) + '</p></div>';
+  }).join("");
+}
+function met(l, v, c){
+  return '<div class="m"><p class="l">' + l + '</p><p class="v"' + (c?' style="color:'+c+'"':'') + '>' + v + '</p></div>';
+}
+
+/* ---------- ХӨДӨЛГӨӨН ---------- */
+var mvForm = {f:"GOBI", t:"UHG", p:"", qty:"", pkg:"", carrier:"", plate:"", dep:"", urgent:false};
+
+function scrMove(){
+  var w = $("app");
+  if(S.sub === "new"){ return mvNew(w); }
+
+  var list = S.moves.slice().sort(function(a,b){ return (b.dep||"").localeCompare(a.dep||""); });
+  var h = '<button class="pri w noprint" id="newmv" style="margin-bottom:12px">+ Шинэ хөдөлгөөн</button>';
+
+  if(!list.length){
+    h += '<div class="card"><p class="empty">Хөдөлгөөн бүртгэгдээгүй байна</p></div>';
+    w.innerHTML = h; $("newmv").onclick = function(){ S.sub="new"; render(); }; return;
+  }
+
+  h += '<div class="card"><h2>Бүх хөдөлгөөн</h2><div id="mvl"></div></div>';
+  w.innerHTML = h;
+  $("newmv").onclick = function(){ S.sub="new"; render(); };
+
+  var box = $("mvl");
+  list.forEach(function(m){
+    var late = m.st==="transit" && dDiff(m.eta, today())>0;
+    var pill = m.st==="done" ? '<span class="pill p-grn">Хүлээн авсан</span>'
+      : (late ? '<span class="pill p-red">Хоцорсон</span>'
+      : (m.urgent ? '<span class="pill p-amb">Яаралтай</span>' : '<span class="pill p-acc">Замд</span>'));
+    var idxF = LOC.map(function(x){return x.k;}).indexOf(m.from);
+    var idxT = LOC.map(function(x){return x.k;}).indexOf(m.to);
+    var dots = LOC.map(function(x, i){
+      var inSeg = i >= idxF && i <= idxT;
+      var bg = "#d2d2cb";
+      if(m.st === "done" && inSeg) bg = "#639922";
+      else if(m.st === "transit"){
+        if(i === idxT) bg = late ? "#e24b4a" : "#ef9f27";
+        else if(i >= idxF && i < idxT) bg = "#639922";
+      }
+      var lineOn = (m.st === "done" ? (i >= idxF && i < idxT) : (i >= idxF && i < idxT));
+      return '<div class="d" style="background:' + bg + '"></div>'
+        + (i < LOC.length - 1 ? '<div class="l" style="background:' + (lineOn ? "#639922" : "#e6e6e1") + '"></div>' : '');
+    }).join("");
+
+    var lines = m.lines.map(function(L){
+      return esc(L.p) + " · " + fmt(L.qty) + (item(L.p)?" "+item(L.p).u:"") + (L.pkg? " · "+L.pkg+" сав":"");
+    }).join("<br>");
+
+    var card = el('<div class="card" style="margin-bottom:10px">'
+      + '<div style="display:flex;justify-content:space-between;gap:8px;margin-bottom:6px">'
+      + '<div style="flex:1;min-width:0"><p class="t" style="font-weight:650">' + lines + '</p>'
+      + '<p class="s">' + esc(m.id) + ' · ' + locName(m.from) + ' → ' + locName(m.to) + '</p></div>' + pill + '</div>'
+      + '<div class="stg">' + dots + '</div>'
+      + '<div class="stgl">' + LOC.map(function(x){ return '<span>' + x.n.split(" ")[0] + '</span>'; }).join("") + '</div>'
+      + '<div style="display:flex;justify-content:space-between;gap:8px;border-top:1px solid var(--ln);margin-top:9px;padding-top:8px">'
+      + '<p class="s">' + (m.st==="done" ? "Хүлээн авсан " + shortD(m.arr) : "ETA " + shortD(m.eta) + (late ? " · " + dDiff(m.eta,today()) + " хоног хэтэрсэн" : ""))
+      + (m.carrier ? " · " + esc(m.carrier) : "") + (m.plate ? " · " + esc(m.plate) : "") + '</p>'
+      + (m.st==="transit" ? '<button class="pri noprint" data-rc="'+m.id+'" style="padding:6px 12px;font-size:13px">Хүлээн авах</button>' : '')
+      + '</div></div>');
+    box.appendChild(card);
+  });
+
+  Array.prototype.forEach.call(box.querySelectorAll("[data-rc]"), function(b){
+    b.onclick = function(){ receive(b.getAttribute("data-rc")); };
+  });
+}
+
+function receive(id){
+  var m = null;
+  S.moves.forEach(function(x){ if(x.id===id) m=x; });
+  if(!m) return;
+  if(!confirm("Хүлээн авалтыг баталгаажуулах уу? Үлдэгдэл шинэчлэгдэнэ.")) return;
+  m.st = "done"; m.arr = today();
+  m.lines.forEach(function(L){
+    var it = item(L.p); if(!it) return;
+    var fk = m.from==="UBWH" ? "ub" : (m.from==="GOBI" ? "gobi" : (m.from==="UHG" ? "uhg" : null));
+    var tk = m.to==="UBWH" ? "ub" : (m.to==="GOBI" ? "gobi" : (m.to==="UHG" ? "uhg" : null));
+    if(fk) it[fk] = Math.max(0, (it[fk]||0) - L.qty);
+    if(tk) it[tk] = (it[tk]||0) + L.qty;
+    pushItem(it);
+  });
+  pushMoveUpdate(m);
+  save(); render();
+}
+
+function mvNew(w){
+  if(!mvForm.p) mvForm.p = S.items[0].n;
+  if(!mvForm.dep) mvForm.dep = today();
+  var legOpts = LEGS.map(function(L,i){
+    var sel = (L.f===mvForm.f && L.t===mvForm.t) ? " selected" : "";
+    return '<option value="'+i+'"'+sel+'>' + locName(L.f) + ' → ' + locName(L.t) + '</option>';
+  }).join("");
+  var itOpts = S.items.map(function(it){
+    return '<option value="'+esc(it.n)+'"'+(it.n===mvForm.p?" selected":"")+'>'+esc(it.n)+'</option>';
+  }).join("");
+
+  w.innerHTML = '<div class="card">'
+    + '<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">'
+    + '<button class="gh" id="bk">←</button><h2 style="margin:0">Шинэ хөдөлгөөн</h2></div>'
+    + '<div class="f"><label>Салгаа</label><select id="leg">' + legOpts + '</select></div>'
+    + '<div class="f"><label>Тос</label><select id="prd">' + itOpts + '</select></div>'
+    + '<div class="f2"><div class="f"><label>Тоо хэмжээ</label><input id="qty" inputmode="numeric" value="'+esc(mvForm.qty)+'" placeholder="8000"></div>'
+    + '<div class="f"><label>Савны тоо</label><input id="pkg" inputmode="numeric" value="'+esc(mvForm.pkg)+'" placeholder="8"></div></div>'
+    + '<div class="f2"><div class="f"><label>Тээвэрлэгч</label><input id="car" value="'+esc(mvForm.carrier)+'" placeholder="Mines Up"></div>'
+    + '<div class="f"><label>Улсын дугаар</label><input id="plt" value="'+esc(mvForm.plate)+'" placeholder="85-45 УБА"></div></div>'
+    + '<div class="f"><label>Гарсан огноо</label><input id="dep" type="date" value="'+mvForm.dep+'"></div>'
+    + '<div class="f"><label style="display:flex;align-items:center;gap:9px;font-size:14px;color:var(--tx)">'
+    + '<input type="checkbox" id="urg" style="width:19px;height:19px"'+(mvForm.urgent?" checked":"")+'> Яаралтай ачилт</label></div>'
+    + '<p class="s" id="eta"></p><p class="err" id="mverr"></p>'
+    + '<button class="pri w" id="sv">Хадгалах</button></div>';
+
+  $("bk").onclick = function(){ S.sub=""; render(); };
+  function upd(){
+    var L = LEGS[Number($("leg").value)];
+    mvForm.f = L.f; mvForm.t = L.t;
+    $("eta").textContent = "Нормативт " + L.d + " хоног · хүрэх огноо " + shortD(dAdd($("dep").value || today(), L.d));
+  }
+  $("leg").onchange = upd; $("dep").onchange = upd; upd();
+
+  $("sv").onclick = function(){
+    var q = Number(String($("qty").value).replace(/[ ,]/g,""));
+    var pk = $("pkg").value === "" ? 0 : Number($("pkg").value);
+    var e = $("mverr");
+    if(!q || isNaN(q) || q <= 0){ e.textContent = "Тоо хэмжээг зөв оруулна уу"; return; }
+    if(isNaN(pk) || pk < 0){ e.textContent = "Савны тоог зөв оруулна уу"; return; }
+    if(!$("dep").value){ e.textContent = "Гарсан огноог оруулна уу"; return; }
+    e.textContent = "";
+    var L = LEGS[Number($("leg").value)];
+    var id = "MV-" + String(S.seq++).padStart(4,"0");
+    S.moves.push({
+      id:id, from:L.f, to:L.t, st:"transit",
+      dep:$("dep").value, eta:dAdd($("dep").value, L.d), arr:"",
+      carrier:$("car").value.trim(), plate:$("plt").value.trim(), urgent:$("urg").checked,
+      lines:[{p:$("prd").value, qty:q, pkg:pk}]
+    });
+    pushMove(S.moves[S.moves.length-1]);
+    mvForm = {f:L.f, t:L.t, p:$("prd").value, qty:"", pkg:"", carrier:$("car").value.trim(), plate:"", dep:$("dep").value, urgent:false};
+    S.sub = ""; save(); render();
+  };
+}
+
+/* ---------- ҮЗЛЭГ ---------- */
+var insForm = {store:0, res:{}, note:"", notes:{}};
+
+function scrInsp(){
+  var w = $("app");
+  if(S.sub === "new"){ return insNew(w); }
+
+  var h = '<button class="pri w noprint" id="newin" style="margin-bottom:12px">+ Шинэ үзлэг</button>';
+  var bad = [];
+  S.inspections.forEach(function(x){
+    CHECKS.forEach(function(c, i){ if(x.res[i]==="bad") bad.push({d:x.date, s:x.store, c:c[0], n:x.notes[i]||""}); });
+  });
+  var counts = {};
+  bad.forEach(function(b){ counts[b.c] = (counts[b.c]||0)+1; });
+
+  if(bad.length){
+    h += '<div class="card"><h2>Илэрсэн зөрчил</h2>'
+      + Object.keys(counts).sort(function(a,b){return counts[b]-counts[a];}).map(function(c){
+          var last = bad.filter(function(b){return b.c===c;}).slice(-1)[0];
+          return '<div class="row"><div class="g"><p class="t">' + esc(c) + '</p>'
+            + '<p class="s">' + shortD(last.d) + ' · ' + esc(last.s) + (last.n? " · "+esc(last.n):"") + '</p></div>'
+            + '<span class="pill ' + (counts[c]>=3?"p-red":"p-amb") + '">' + counts[c] + ' удаа</span></div>';
+        }).join("") + '</div>';
+  }
+
+  h += '<div class="card"><h2>Үзлэгийн түүх</h2>';
+  if(!S.inspections.length){ h += '<p class="empty">Үзлэг хийгдээгүй байна</p>'; }
+  else {
+    h += S.inspections.slice().reverse().map(function(x){
+      var nb = CHECKS.filter(function(_,i){ return x.res[i]==="bad"; }).length;
+      var nd = Object.keys(x.res).length;
+      return '<div class="row"><div class="g"><p class="t">' + esc(x.store) + '</p>'
+        + '<p class="s">' + x.date + ' · ' + nd + '/' + CHECKS.length + ' бөглөсөн' + (x.note? " · "+esc(x.note):"") + '</p></div>'
+        + '<span class="pill ' + (nb?"p-red":"p-grn") + '">' + (nb ? nb + " зөрчил" : "Хэвийн") + '</span></div>';
+    }).join("");
+  }
+  h += '</div>';
+  w.innerHTML = h;
+  $("newin").onclick = function(){ insForm = {store:0, res:{}, note:"", notes:{}}; S.sub="new"; render(); };
+}
+
+function insNew(w){
+  w.innerHTML = '<div class="card">'
+    + '<div style="display:flex;align-items:center;gap:10px;margin-bottom:13px">'
+    + '<button class="gh" id="bk2">←</button><h2 style="margin:0">Шинэ үзлэг</h2>'
+    + '<span class="s" id="prog" style="margin-left:auto"></span></div>'
+    + '<div class="f"><label>Агуулах</label><select id="store">'
+    + STORES.map(function(s,i){ return '<option value="'+i+'"'+(insForm.store===i?" selected":"")+'>'+esc(s)+'</option>'; }).join("")
+    + '</select></div><div id="ilist"></div>'
+    + '<div class="f" style="margin-top:13px"><label>Нэмэлт тэмдэглэл</label><textarea id="note">'+esc(insForm.note)+'</textarea></div>'
+    + '<p class="err" id="inerr"></p><button class="pri w" id="isave">Баталгаажуулах</button></div>';
+
+  $("bk2").onclick = function(){ S.sub=""; render(); };
+  $("store").onchange = function(){ insForm.store = Number(this.value); };
+  $("note").oninput = function(){ insForm.note = this.value; };
+  paintIns();
+  $("isave").onclick = function(){
+    var done = Object.keys(insForm.res).length;
+    if(done < CHECKS.length){ $("inerr").textContent = "Бүх " + CHECKS.length + " мөрийг бөглөнө үү (" + done + "/" + CHECKS.length + ")"; return; }
+    $("inerr").textContent = "";
+    var rec = {date:today(), store:STORES[insForm.store], res:insForm.res, notes:insForm.notes, note:insForm.note, fixed:false};
+    S.inspections.push(rec); pushInsp(rec);
+    S.sub = ""; save(); render();
+  };
+}
+
+function paintIns(){
+  var l = $("ilist"); if(!l) return;
+  l.innerHTML = "";
+  CHECKS.forEach(function(c, i){
+    var r = insForm.res[i];
+    var row = el('<div><div class="ins"><div class="g">' + esc(c[0])
+      + '<p class="s">' + esc(c[1]) + '</p></div><div class="b">'
+      + '<button data-i="'+i+'" data-k="ok" class="'+(r==="ok"?"ok":"")+'">✓</button>'
+      + '<button data-i="'+i+'" data-k="bad" class="'+(r==="bad"?"bad":"")+'">✕</button>'
+      + '<button data-i="'+i+'" data-k="na" class="'+(r==="na"?"na":"")+'">—</button>'
+      + '</div></div>'
+      + (r==="bad" ? '<div style="padding:0 0 10px"><input data-n="'+i+'" placeholder="Тайлбар бичих" value="'+esc(insForm.notes[i]||"")+'"></div>' : '')
+      + '</div>');
+    l.appendChild(row);
+  });
+  Array.prototype.forEach.call(l.querySelectorAll("[data-i]"), function(b){
+    b.onclick = function(){ insForm.res[Number(b.getAttribute("data-i"))] = b.getAttribute("data-k"); paintIns(); };
+  });
+  Array.prototype.forEach.call(l.querySelectorAll("[data-n]"), function(inp){
+    inp.oninput = function(){ insForm.notes[Number(inp.getAttribute("data-n"))] = inp.value; };
+  });
+  var p = $("prog");
+  if(p) p.textContent = Object.keys(insForm.res).length + "/" + CHECKS.length;
+}
+
+/* ---------- ТООЦООЛУУР ---------- */
+var IVALS = [250, 500, 1000, 2000];
+
+function applic(mi, iv){ return OEM[mi].c.filter(function(c){ return iv % c.h === 0; }); }
+
+function normName(s){ return String(s).toLowerCase().replace(/[^a-z0-9]/g, ""); }
+function matchItem(prod){
+  var k = normName(prod);
+  for(var i=0;i<S.items.length;i++){ if(normName(S.items[i].n) === k) return S.items[i]; }
+  return null;
+}
+
+function calcTotals(){
+  var t = {};
+  S.calc.rows.forEach(function(r){
+    applic(r.m, r.i).forEach(function(c){ t[c.p] = (t[c.p]||0) + c.v * r.n; });
+  });
+  Object.keys(t).forEach(function(k){ t[k] = t[k] * S.calc.factor; });
+  return t;
+}
+
+function scrCalc(){
+  var w = $("app");
+  var C = S.calc;
+  var opts = OEM.map(function(m,i){ return '<option value="'+i+'"'+(C.mi===i?" selected":"")+'>'+esc(m.n)+'</option>'; }).join("");
+
+  w.innerHTML = '<div class="big"><p class="l">Нийт шаардлагатай</p>'
+    + '<div class="n" id="big">0 л</div><p class="s" id="bsub">Техник нэмнэ үү</p></div>'
+    + '<div class="card noprint"><h2>Техник нэмэх</h2>'
+    + '<div class="f"><label>1 · Техникийн загвар</label><select id="mod">' + opts + '</select>'
+    + '<p class="note" id="minfo"></p></div>'
+    + '<div class="f"><label>2 · Үйлчилгээний цаг</label><div class="seg" id="ivs"></div></div>'
+    + '<div class="f"><label>3 · Хэдэн ширхэг</label><div class="qty">'
+    + '<button id="mn">−</button><input id="qn" inputmode="numeric" value="'+C.qty+'"><button id="pl">+</button></div>'
+    + '<p class="err" id="qerr"></p></div>'
+    + '<button class="pri w" id="addb">Жагсаалтад нэмэх</button><p class="err" id="aerr"></p>'
+    + '<details><summary>Энэ үйлчилгээнд солигдох савнууд</summary><div id="cmp" style="margin-top:8px"></div></details></div>'
+    + '<div class="card"><h2>Нэмсэн техник</h2><div id="clist"></div><div class="acts noprint" id="cacts"></div></div>'
+    + '<div class="card"><h2>Тос тус бүрээр</h2><div id="cres"></div></div>'
+    + '<div class="card"><h2>Тээвэр</h2><div id="ctr"></div></div>'
+    + '<div class="card noprint"><h2>Нэмэлт хийлтийн коэффициент</h2>'
+    + '<div class="chips" id="facs"></div>'
+    + '<p class="note">Хуваарь дээр төлөвлөгөөт үйлчилгээ л харагддаг. Гоожилт, нэмэлт хийлтийг коэффициентээр тооцно.</p></div>'
+    + '<p class="note">OEM-ийн хугацаат интервалд суурилсан ойролцоо тооцоо. Тосны шинжилгээгээр солигддог савнууд ороогүй. Эцсийн шийдвэрийг инженер гаргана.</p>';
+
+  $("mod").onchange = function(){ C.mi = Number(this.value); paintBuilder(); };
+  $("mn").onclick = function(){ if(C.qty>1){ C.qty--; $("qn").value=C.qty; $("qerr").textContent=""; } };
+  $("pl").onclick = function(){ if(C.qty<99){ C.qty++; $("qn").value=C.qty; $("qerr").textContent=""; } };
+  $("qn").oninput = function(){
+    var v = this.value.trim(), n = Number(v);
+    if(v==="" || isNaN(n) || n<1 || n!==Math.floor(n)){ $("qerr").textContent = "1-ээс их бүхэл тоо оруулна уу"; return; }
+    $("qerr").textContent = ""; C.qty = Math.min(99, n);
+  };
+  $("addb").onclick = function(){
+    if($("qerr").textContent){ $("aerr").textContent = "Тоог зөв оруулсны дараа нэмнэ үү"; return; }
+    var cs = applic(C.mi, C.iv);
+    if(!cs.length){ $("aerr").textContent = "Энэ интервалд солигдох сав алга. Өөр интервал сонгоно уу"; return; }
+    $("aerr").textContent = "";
+    var ex = null;
+    C.rows.forEach(function(r){ if(r.m===C.mi && r.i===C.iv) ex = r; });
+    if(ex) ex.n = Math.min(999, ex.n + C.qty); else C.rows.push({m:C.mi, i:C.iv, n:C.qty});
+    C.qty = 1; $("qn").value = 1;
+    save(); paintBuilder(); paintCalc();
+  };
+  paintBuilder(); paintCalc();
+}
+
+function paintBuilder(){
+  var C = S.calc;
+  var hs = OEM[C.mi].c.map(function(c){ return c.h; }).filter(function(v,i,a){ return a.indexOf(v)===i; }).sort(function(a,b){return a-b;});
+  $("minfo").textContent = OEM[C.mi].c.length + " сав · интервал " + hs.join(", ") + " цаг";
+  var box = $("ivs"); box.innerHTML = "";
+  IVALS.forEach(function(iv){
+    var n = applic(C.mi, iv).length;
+    var b = document.createElement("button");
+    b.textContent = iv;
+    if(C.iv === iv) b.className = "on";
+    else if(!n) b.style.color = "var(--tx3)";
+    b.onclick = function(){ C.iv = iv; paintBuilder(); };
+    box.appendChild(b);
+  });
+  $("qn").value = C.qty;
+  var cs = applic(C.mi, C.iv), c = $("cmp");
+  c.innerHTML = cs.length
+    ? cs.map(function(x){ return '<div class="row" style="padding:6px 0"><div class="g"><p class="t" style="font-size:13px">'
+        + esc(x.c) + '</p><p class="s">' + esc(x.p) + '</p></div><span class="v" style="font-size:13px">' + fmt(x.v) + ' л</span></div>'; }).join("")
+      + '<div class="row" style="border:none"><div class="g"><p class="t" style="font-weight:650">Нэг техникт</p></div>'
+      + '<span class="v">' + fmt(cs.reduce(function(a,b){return a+b.v;},0)) + ' л</span></div>'
+    : '<p class="note">Энэ интервалд солигдох сав алга.</p>';
+
+  var f = $("facs"); f.innerHTML = "";
+  [1, 1.1, 1.2, 1.3].forEach(function(v){
+    var b = document.createElement("button");
+    b.textContent = v.toFixed(1);
+    if(Math.abs(S.calc.factor - v) < 0.001) b.className = "on";
+    b.onclick = function(){ S.calc.factor = v; save(); paintBuilder(); paintCalc(); };
+    f.appendChild(b);
+  });
+}
+
+function paintCalc(){
+  var C = S.calc, t = calcTotals(), grand = 0;
+  Object.keys(t).forEach(function(k){ grand += t[k]; });
+  var units = C.rows.reduce(function(a,r){ return a + r.n; }, 0);
+  $("big").textContent = fmt(grand) + " л";
+  $("bsub").textContent = C.rows.length ? units + " техник · " + C.rows.length + " мөр · коэффициент " + C.factor.toFixed(1) : "Техник нэмнэ үү";
+
+  var l = $("clist");
+  if(!C.rows.length){ l.innerHTML = '<p class="empty">Жагсаалт хоосон байна</p>'; $("cacts").innerHTML = ""; }
+  else {
+    l.innerHTML = C.rows.map(function(r, i){
+      var per = applic(r.m, r.i).reduce(function(a,c){ return a + c.v; }, 0);
+      return '<div class="row"><div class="g"><p class="t">' + esc(OEM[r.m].n) + ' × ' + r.n + '</p>'
+        + '<p class="s">' + r.i + ' цаг · ' + fmt(per) + ' л/техник</p></div>'
+        + '<span class="v">' + fmt(per * r.n) + ' л</span>'
+        + '<button class="gh noprint" data-d="' + i + '">✕</button></div>';
+    }).join("");
+    Array.prototype.forEach.call(l.querySelectorAll("[data-d]"), function(b){
+      b.onclick = function(){ C.rows.splice(Number(b.getAttribute("data-d")),1); save(); paintCalc(); };
+    });
+    $("cacts").innerHTML = '<button id="csv">CSV татах</button><button id="prt">Хэвлэх</button><button id="clr">Цэвэрлэх</button>';
+    $("csv").onclick = exportCsv;
+    $("prt").onclick = function(){ window.print(); };
+    $("clr").onclick = function(){ if(confirm("Жагсаалтыг цэвэрлэх үү?")){ C.rows = []; save(); paintCalc(); } };
+  }
+
+  var keys = Object.keys(t).sort();
+  var r = $("cres");
+  if(!keys.length){ r.innerHTML = '<p class="empty">Техник нэмэхэд энд харагдана</p>'; }
+  else {
+    r.innerHTML = '<div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Тос</th>'
+      + '<th class="r">Хэрэгцээ</th><th class="r">UHG</th><th class="r">Татах</th></tr></thead><tbody>'
+      + keys.map(function(p){
+          var it = matchItem(p);
+          var st = it ? (it.uhg||0) : 0, sh = t[p] - st;
+          var pk = PACK[it ? it.pack : "drum"];
+          var pcs = sh > 0 ? Math.ceil(sh / pk.size) : 0;
+          return '<tr><td>' + esc(p) + (it ? '' : '<p class="s">бүртгэлгүй</p>') + '</td>'
+            + '<td class="r">' + fmt(t[p]) + '</td><td class="r">' + fmt(st) + '</td>'
+            + '<td class="r">' + (sh > 0
+              ? '<span class="pill p-red">' + pcs + (it && it.pack==="ibc" ? " IBC" : " торх") + '</span>'
+              : '<span class="pill p-grn">хүрэлцэнэ</span>') + '</td></tr>';
+        }).join("") + '</tbody></table></div>';
+  }
+
+  var uu = 0, pieces = 0;
+  keys.forEach(function(p){
+    var it = matchItem(p);
+    var sh = t[p] - (it ? (it.uhg||0) : 0);
+    if(sh <= 0) return;
+    var pk = PACK[it ? it.pack : "drum"];
+    var n = Math.ceil(sh / pk.size);
+    pieces += n; uu += n * pk.units;
+  });
+  var tr = $("ctr");
+  if(!pieces){ tr.innerHTML = '<div class="banner b-grn"><span>✓</span><div>Нөөц бүрэн хүрэлцэнэ. Татах шаардлагагүй.</div></div>'; }
+  else {
+    var trucks = Math.ceil(uu / TRUCK);
+    var last = uu - (trucks - 1) * TRUCK;
+    var pct = Math.min(100, Math.round(last / TRUCK * 100));
+    var free = Math.round((TRUCK - last) * 10) / 10;
+    tr.innerHTML = '<div class="row" style="border:none;padding-top:0"><div class="g">'
+      + '<p class="t" style="font-weight:650">' + pieces + ' сав · ' + (Math.round(uu*10)/10) + ' нэгж</p>'
+      + '<p class="s">1 машин = 84 нэгж (24 IBC эсвэл 84 торх)</p></div>'
+      + '<span class="v">' + trucks + ' машин</span></div>'
+      + '<div class="bar"><i style="width:' + pct + '%;background:var(--acc)"></i></div>'
+      + '<p class="note" style="margin-top:6px">Сүүлийн машины ачаалалт ' + pct + '% · ' + free + ' нэгж чөлөөтэй</p>'
+      + (free >= 7 ? '<div class="banner b-amb" style="margin-top:10px"><span>i</span><div>Чөлөөт зайд нөөц багатай тосыг нэмж ачих боломжтой.</div></div>' : '');
+  }
+}
+
+function exportCsv(){
+  var t = calcTotals();
+  var L = [];
+  L.push(["Огноо", today()].join(","));
+  L.push(["Коэффициент", S.calc.factor].join(","));
+  L.push("");
+  L.push(["Загвар","Интервал","Тоо","Нийт л"].join(","));
+  S.calc.rows.forEach(function(r){
+    var per = applic(r.m, r.i).reduce(function(a,c){ return a+c.v; }, 0);
+    L.push(['"'+OEM[r.m].n+'"', r.i, r.n, Math.round(per*r.n*S.calc.factor)].join(","));
+  });
+  L.push("");
+  L.push(["Тос","Хэрэгцээ","UHG үлдэгдэл","Дутагдал","Татах сав"].join(","));
+  Object.keys(t).sort().forEach(function(p){
+    var it = matchItem(p), st = it ? (it.uhg||0) : 0, sh = t[p] - st;
+    var pk = PACK[it ? it.pack : "drum"];
+    L.push(['"'+p+'"', Math.round(t[p]), st, Math.max(0, Math.round(sh)), sh>0?Math.ceil(sh/pk.size):0].join(","));
+  });
+  var b = new Blob(["\ufeff" + L.join("\n")], {type:"text/csv;charset=utf-8"});
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(b); a.download = "tosnii-heregtsee-" + today() + ".csv";
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+
+/* ---------- ТОХИРГОО ---------- */
+function scrCfg(){
+  var w = $("app");
+  w.innerHTML = '<div class="card">'
+    + '<div style="display:flex;align-items:center;gap:10px;margin-bottom:13px">'
+    + '<button class="gh" id="bk3">←</button><h2 style="margin:0">Тохиргоо</h2></div>'
+    + '<p class="note" style="margin:0 0 13px">Үлдэгдэл, доод норм, сарын дундаж хэрэглээ, савны төрөл.</p>'
+    + '<div id="cfgl"></div></div>'
+    + '<div class="card"><h2>Өгөгдөл</h2>'
+    + '<div class="acts" style="margin-top:0"><button id="syn">Серверээс дахин татах</button>'
+    + '<button id="exp">Нөөц татах</button>'
+    + '<button id="out">Гарах</button>'
+    + '<button id="rst">Анхны утгад буцаах</button></div>'
+    + '<p class="note" id="sinfo"></p>'
+    + '<p class="note">Өгөгдөл энэ төхөөрөмж дээр хадгалагдана. Өөр төхөөрөмж дээр харагдахгүй.</p></div>';
+  $("bk3").onclick = function(){ S.sub=""; render(); };
+  $("sinfo").textContent = AUTH.email
+    ? ("Нэвтэрсэн: " + AUTH.email + (SYNC.last ? " · сүүлд синк " + SYNC.last.slice(0,16).replace("T"," ") : ""))
+    : "Офлайн горим. Нэвтэрвэл өгөгдөл хоёр төхөөрөмж дээр ижил байна.";
+  $("syn").onclick = function(){
+    if(!AUTH.token){ alert("Эхлээд нэвтэрнэ үү."); return; }
+    pull().then(function(){ render(); });
+  };
+  $("out").onclick = function(){
+    if(!confirm("Гарах уу? Хадгалагдаагүй өөрчлөлт байвал синк хийгдэхгүй.")) return;
+    clearAuth(); S.screen = "login"; render();
+  };
+  $("exp").onclick = function(){
+    var b = new Blob([JSON.stringify({items:S.items, moves:S.moves, inspections:S.inspections}, null, 2)], {type:"application/json"});
+    var a = document.createElement("a"); a.href = URL.createObjectURL(b);
+    a.download = "uhg-oil-data-" + today() + ".json";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  };
+  $("rst").onclick = function(){
+    if(!confirm("Бүх өгөгдлийг устгаж анхны утгад буцаах уу?")) return;
+    S.items = SEED.map(function(p){ return JSON.parse(JSON.stringify(p)); });
+    S.moves = []; S.inspections = []; S.calc = {mi:0, iv:2000, qty:1, rows:[], factor:1.2}; S.seq = 1;
+    save(); S.sub = ""; render();
+  };
+
+  var l = $("cfgl");
+  l.innerHTML = S.items.map(function(it, i){
+    return '<div style="padding:11px 0;border-bottom:1px solid var(--ln)">'
+      + '<p class="t" style="font-weight:650;margin-bottom:7px">' + esc(it.n) + ' <span class="s">' + it.u + '</span></p>'
+      + '<div class="f2"><div><label>UHG үлдэгдэл</label><input data-k="uhg" data-i="'+i+'" inputmode="numeric" value="'+it.uhg+'"></div>'
+      + '<div><label>Говь үлдэгдэл</label><input data-k="gobi" data-i="'+i+'" inputmode="numeric" value="'+it.gobi+'"></div></div>'
+      + '<div class="f2" style="margin-top:9px"><div><label>УБ агуулах</label><input data-k="ub" data-i="'+i+'" inputmode="numeric" value="'+it.ub+'"></div>'
+      + '<div><label>Доод норм</label><input data-k="min" data-i="'+i+'" inputmode="numeric" value="'+it.min+'"></div></div>'
+      + '<div class="f2" style="margin-top:9px"><div><label>Сарын дундаж хэрэглээ</label><input data-k="mo" data-i="'+i+'" inputmode="numeric" value="'+it.mo+'"></div>'
+      + '<div><label>Савны төрөл</label><select data-p="'+i+'">'
+      + '<option value="ibc"'+(it.pack==="ibc"?" selected":"")+'>IBC 1000 л</option>'
+      + '<option value="drum"'+(it.pack==="drum"?" selected":"")+'>Торх 208 л</option></select></div></div></div>';
+  }).join("");
+  Array.prototype.forEach.call(l.querySelectorAll("[data-k]"), function(inp){
+    inp.oninput = function(){
+      var v = inp.value.replace(/[ ,]/g,""), n = Number(v);
+      if(v==="" || isNaN(n) || n<0){ inp.style.borderColor = "var(--red)"; return; }
+      inp.style.borderColor = "";
+      var itx = S.items[Number(inp.getAttribute("data-i"))];
+      itx[inp.getAttribute("data-k")] = n;
+      save(); pushItem(itx);
+    };
+  });
+  Array.prototype.forEach.call(l.querySelectorAll("[data-p]"), function(sel){
+    sel.onchange = function(){ var itx = S.items[Number(sel.getAttribute("data-p"))];
+      itx.pack = sel.value; save(); pushItem(itx); };
+  });
+}
+
+/* ---------- НАВИГАЦ ---------- */
+function render(){
+  if(S.screen === "login"){ scrLogin(); return; }
+  document.getElementById("nav").style.display = "flex";
+  var tab = null;
+  TABS.forEach(function(t){ if(t.k === S.tab) tab = t; });
+  document.documentElement.style.setProperty("--acc", "var(--" + tab.c + ")");
+  document.documentElement.style.setProperty("--accBg", "var(--" + tab.c + "Bg)");
+  document.documentElement.style.setProperty("--accLn", "var(--" + tab.c + "Ln)");
+  $("ttl").textContent = S.sub === "cfg" ? "Тохиргоо" : tab.t;
+  setSync(SYNC.state);
+  window.scrollTo(0, 0);
+
+  if(S.sub === "cfg") scrCfg();
+  else if(S.tab === "home") scrHome();
+  else if(S.tab === "move") scrMove();
+  else if(S.tab === "insp") scrInsp();
+  else scrCalc();
+
+  var n = $("nav"); n.innerHTML = "";
+  TABS.forEach(function(t){
+    var b = document.createElement("button");
+    if(t.k === S.tab && S.sub !== "cfg") b.className = "on";
+    b.innerHTML = '<span class="ic">' + t.i + '</span><span class="lb">' + t.l + '</span>';
+    b.onclick = function(){ S.tab = t.k; S.sub = ""; render(); };
+    n.appendChild(b);
+  });
+}
+
+$("cfgbtn").onclick = function(){ S.sub = S.sub === "cfg" ? "" : "cfg"; render(); };
+loadAuth(); loadLocal();
+if(AUTH.token){
+  S.screen = "app"; render();
+  pull().then(function(){ flush(); render(); });
+} else {
+  S.screen = "login"; render();
+}
+
+</script>
+</body>
+</html>
